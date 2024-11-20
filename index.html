@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Endy Brand</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo-container">
+                <div class="logo">ENDY BRAND</div>
+            </div>
+
+            <div class="category-links">
+                <a href="#polerones">POLERONES</a>
+                <a href="#poleras">POLERAS</a>
+                <a href="#pantalones">PANTALONES</a>
+            </div>
+
+            <div class="search-container">
+                <input type="text" placeholder="Buscar...">
+                <i class="fas fa-search"></i>
+            </div>
+        </nav>
+    </header>
+    <section class="promo-video">
+        <video id="promo-video" autoplay loop muted>
+            <source src="videoplayback.mp4" type="video/mp4">
+        </video>
+    </section>
+    <section id="polerones">
+        <h2>Polerones</h2>
+        <div class="product-container">
+            <div class="product-card">
+                <img src="poleron Beige.webp" alt="Polerón 1">
+                <p class="product-name">Polerón Mujer Beige</p>
+                <p class="product-price">$25.000</p>
+            </div>
+            <div class="product-card">
+                <img src="Poleron azul.avif" alt="Polerón 2">
+                <p class="product-name">Polerón Azul</p>
+                <p class="product-price">$23.000</p>
+            </div>
+            <div class="product-card">
+                <img src="Poleron Gris.jpg" alt="Polerón 3">
+                <p class="product-name">Polerón Gris</p>
+                <p class="product-price">$28.000</p>
+            </div>
+            <div class="product-card">
+                <img src="Nuevo poleron verde.webp" alt="Polerón 3">
+                <p class="product-name">Polerón Verde</p>
+                <p class="product-price">$21.990</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="poleras">
+        <h2>Poleras</h2>
+        <div class="product-container">
+            <div class="product-card">
+                <img src="Polera roja.jpg" alt="Polera Roja">
+                <p class="product-name">Polera Roja</p>
+                <p class="product-price">$12.000</p>
+            </div>
+            <div class="product-card">
+                <img src="Polera boxy fit.webp" alt="Polera Negra">
+                <p class="product-name">Polera Boxy Fit</p>
+                <p class="product-price">$15.990</p>
+            </div>
+            <div class="product-card">
+                <img src="polera-polo-manga-corta-100-algodon-certificada-3-7b272e55-8e26-4197-8c55-9f1a49aefe98.jpg" alt="Polera Verde">
+                <p class="product-name">Polera Verde</p>
+                <p class="product-price">$13.990</p>
+            </div>
+            <div class="product-card">
+                <img src="otra polera cafe.webp" alt="Polera Cafe">
+                <p class="product-name">Polera Cafe</p>
+                <p class="product-price">$18.990</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="pantalones">
+        <h2>Pantalones</h2>
+        <div class="product-container">
+            <div class="product-card">
+                <img src="jeans hombre.webp" alt="Pantalón 1">
+                <p class="product-name">Jeans Hombre</p>
+                <p class="product-price">$18.000</p>
+            </div>
+            <div class="product-card">
+                <img src="jeans-straight-tiro-alto-mujer-soviet.jpg" alt="Pantalón 2">
+                <p class="product-name">Jeans Mujer</p>
+                <p class="product-price">$20.000</p>
+            </div>
+            <div class="product-card">
+                <img src="pantalon-cargo-slim-verde.jpg" alt="Pantalón 3">
+                <p class="product-name">Pantalón Cargo Verde</p>
+                <p class="product-price">$22.000</p>
+            </div>
+            <div class="product-card">
+                <img src="pantalon cargo negro.jpg" alt="Pantalón 3">
+                <p class="product-name">Pantalón Cargo Negro</p>
+                <p class="product-price">$26.990</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="social-links">
+            <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+            <a href="https://web.facebook.com/"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.google.com/intl/es-419/gmail/about/"><i class="fas fa-envelope"></i></a>
+        </div>
+        <div class="info-links">
+            <a href="#">Sobre Nosotros</a>
+            <a href="#">Contacto</a>
+            <a href="#">Dirección</a>
+        </div>
+    </footer>
+
+    <script>
+        const videos = [
+            "videoplayback.mp4",
+            "video2.mp4"
+        ];
+
+        let currentVideoIndex = 0;
+        const promoVideo = document.getElementById('promo-video');
+
+        promoVideo.addEventListener('ended', () => {
+            currentVideoIndex = (currentVideoIndex + 1) % videos.length;
+            promoVideo.src = videos[currentVideoIndex];
+            promoVideo.play();
+        });
+    </script>
+</body>
+</html>
